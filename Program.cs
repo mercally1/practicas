@@ -1,40 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Prueba
+namespace FirstForm
 {
-        partial class Rectangulo
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            private int lado1;
-            public int Lado1
-            {
-                set
-                {
-                    lado1 = value;
-                }
-                get
-                { 
-                    return lado1;
-                }
-            }
-
-
-
-        private int lado2;
-        public int Lado2
-            {
-                set
-                {
-                    lado2 = value;
-                }
-                get
-                {
-                    return lado2;
-                }
-            }
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
         }
-    
+    }
 }
