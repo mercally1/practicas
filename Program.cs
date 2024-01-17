@@ -1,38 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Construtor
+namespace Prueba
 {
-    internal class Construtor
-    {
-        private int[] sueldo;
-        public Construtor()
+        partial class Rectangulo
         {
-            sueldo = new int[5];
-            for (int i = 0; i < sueldo.Length; i++)
+            private int lado1;
+            public int Lado1
             {
-                Console.WriteLine("ingrese el sueldo:");
-                sueldo[i] = int.Parse(Console.ReadLine());
+                set
+                {
+                    lado1 = value;
+                }
+                get
+                { 
+                    return lado1;
+                }
             }
-        }
 
-        public void Print()
-        {
-            for (int i = 0; i < sueldo.Length; i++)
+
+
+        private int lado2;
+        public int Lado2
             {
-                Console.WriteLine(sueldo[i]);
+                set
+                {
+                    lado2 = value;
+                }
+                get
+                {
+                    return lado2;
+                }
             }
-            Console.ReadKey();
         }
-       
-        static void Main(string[] args)
-        {
-            Construtor con = new Construtor();
-            con.Print();
-        }
-    }
+    
 }
